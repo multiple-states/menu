@@ -41,19 +41,21 @@
   /*
   @tab Page
   @section background color
-  @tip Set the background color for your email. You may want to choose one that matches your company's branding.
+  @tip Set the background color for your email.
   @theme page
   */
     body,.background-table{
-      /*@editable*/background-color:#FAFAFA;
+      /*@editable*/background-color:#24275D;
     }
   /*
   @tab Page
-  @section email border
-  @tip Set the border for your email.
+  @section content background color
+  @tip Set the background color of your content.
   */
     #template-container{
-      /*@editable*/border:1px solid #DDDDDD;
+      /*@editable*/padding: 25px;
+      /*@editable*/background-color: #24275D;
+      margin-top: 25px;
     }
   /*
   @tab Page
@@ -120,20 +122,13 @@
       /*@editable*/text-align:left;
     }
   /*
-  @tab Header
-  @section preheader style
-  @tip Set the background color for your email's preheader area.
-  @theme page
-  */
-    #template-preheader{
-      /*@editable*/background-color:#FAFAFA;
-    }
+
   /*
   @tab Header
   @section preheader text
   @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
   */
-    .preheader-content div{
+    .preheader-content {
       /*@editable*/color:#505050;
       /*@editable*/font-family:Arial;
       /*@editable*/font-size:10px;
@@ -154,16 +149,7 @@
       height:auto;
       max-width:600px;
     }
-  /*
-  @tab Header
-  @section header style
-  @tip Set the background color and border for your email's header area.
-  @theme header
-  */
-    #template-header{
-      /*@editable*/background-color:#FFFFFF;
-      /*@editable*/border-bottom:0;
-    }
+
   /*
   @tab Header
   @section header text
@@ -199,7 +185,7 @@
   @tip Set the background color for your email's body area.
   */
     #template-container,.body-content{
-      /*@editable*/background-color:#FDFDFD;
+      /*@editable*/background-color:#fecf9c;
     }
   /*
   @tab Body
@@ -318,7 +304,7 @@
 	                  <tr>
 	                    <td class="header-content">
 
-	                    	<span class="h1" mc:edit="std_preheader_content">
+	                    	<span class="preheader-content" mc:edit="std_preheader_content">
 	                        Use one or two sentences in this area to offer a teaser of your email's content. Text here will show in a preview area in some email clients.
 	                      </span>
 	                    
@@ -362,79 +348,75 @@
 	                <!-- // End Template Body \\ -->
 
 	              </td>
-	            </tr>
-	            <tr>
-	              <td align="center" valign="top">
-	                  
-	                <!-- // Begin Template Footer \\ -->
-	                <table border="0" cellpadding="10" cellspacing="0" width="600" id="template-footer">
-	                  <tr>
-	                    <td valign="top" class="footer-content">
-	                      
-	                      <!-- // Begin Module: Standard Footer \\ -->
-	                      <table border="0" cellpadding="10" cellspacing="0" width="100%">
-                          <tr>
-                            <td colspan="2" valign="middle" id="social">
-                              <div mc:edit="std_social">
-                                &nbsp;<a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a>&nbsp;
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td valign="top" width="370">
-                              <br />
-                              <div mc:edit="std_footer">
-                                  *|IF:LIST|*
-                                  <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
-                                  <br />
-                                  <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                  *|LIST:DESCRIPTION|*
-                                  <br />
-                                  <strong>Our mailing address is:</strong>
-                                  <br>
-                                  *|HTML:LIST_ADDRESS_HTML|*
-                                  <br>
-                                  <!-- *|END:IF|* -->
-                                  *|ELSE:|*
-                                  <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                  <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, All rights reserved.</em>
-                                  <br />
-                                  <strong>Our mailing address is:</strong>
-                                  <br />
-                                  *|USER:ADDRESS_HTML|*
-                                  <!-- *|END:IF|* -->
-                                  *|END:IF|*
-                              </div>
-                              <br />
-                            </td>
-                            <td valign="top" width="170" id="monkey-rewards">
-                              <br />
-                              <div mc:edit="monkeyrewards">
-                                  *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
-                              </div>
-                              <br />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td colspan="2" valign="middle" id="utility">
-	                            <div mc:edit="std_utility">
-                                &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a><!-- *|IFNOT:ARCHIVE_PAGE|* --> | <a href="*|ARCHIVE|*">view email in browser</a><!-- *|END:IF|* -->&nbsp;
-	                            </div>
-                            </td>
-                          </tr>
-	                      </table>
-	                      <!-- // End Module: Standard Footer \\ -->
-	                      
-	                    </td>
-	                  </tr>
-	                </table>
-	                <!-- // End Template Footer \\ -->
+	            </tr>           
 
-	              </td>
-	            </tr>
-	            
 	          </table>
 	          <br />
+
+     			 	<!-- // Begin Template Footer \\ -->
+            <table border="0" cellpadding="10" cellspacing="0" width="600" id="template-footer">
+              <tr>
+                <td valign="top" class="footer-content">
+                  
+                  <!-- // Begin Module: Standard Footer \\ -->
+                  <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                    <tr>
+                      <td colspan="2" valign="middle" id="social">
+                        <div mc:edit="std_social">
+                          &nbsp;<a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a>&nbsp;
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top" width="370">
+                        <br />
+                        <div mc:edit="std_footer">
+                            *|IF:LIST|*
+                            <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+                            <br />
+                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                            *|LIST:DESCRIPTION|*
+                            <br />
+                            <strong>Our mailing address is:</strong>
+                            <br>
+                            *|HTML:LIST_ADDRESS_HTML|*
+                            <br>
+                            <!-- *|END:IF|* -->
+                            *|ELSE:|*
+                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                            <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, All rights reserved.</em>
+                            <br />
+                            <strong>Our mailing address is:</strong>
+                            <br />
+                            *|USER:ADDRESS_HTML|*
+                            <!-- *|END:IF|* -->
+                            *|END:IF|*
+                        </div>
+                        <br />
+                      </td>
+                      <td valign="top" width="170" id="monkey-rewards">
+                        <br />
+                        <div mc:edit="monkeyrewards">
+                            *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+                        </div>
+                        <br />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" valign="middle" id="utility">
+                        <div mc:edit="std_utility">
+                          &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a><!-- *|IFNOT:ARCHIVE_PAGE|* --> | <a href="*|ARCHIVE|*">view email in browser</a><!-- *|END:IF|* -->&nbsp;
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // End Module: Standard Footer \\ -->
+                  
+                </td>
+              </tr>
+            </table>
+            <!-- // End Template Footer \\ -->
+
 	        </td>
 	      </tr>
 	    </table>

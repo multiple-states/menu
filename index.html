@@ -2,6 +2,7 @@
 <html>
 	<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Facebook sharing information tags -->
   <meta property="og:title" content="*|MC:SUBJECT|*">
@@ -12,193 +13,192 @@
     
   <style type="text/css">
 
-    #outlook a{
-      padding:0;
-    }
-    body{
-      width:100% !important;
-    }
-    body{
-      -webkit-text-size-adjust:none;
-    }
-    body{
-      margin:0;
-      padding:0;
-    }
-    img{
-      border:none;
-      font-size:14px;
-      font-weight:bold;
-      height:auto;
-      line-height:100%;
-      outline:none;
-      text-decoration:none;
-      text-transform:capitalize;
-    }
-    #background-table{
-      height:100% !important;
-      margin:0;
-      padding:0;
-      width:100% !important;
-    }
+  /*--------------------------------------------------------- Client-specific Styles */
+  #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+  .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+  .yshortcuts, a .yshortcuts, a .yshortcuts:hover, a .yshortcuts:active, a .yshortcuts:focus{background-color:transparent !important; border:none !important; color:inherit !important;} /* Prevent Yahoo! from styling links */
+
+  /*--------------------------------------------------------- Reset Styles */
+  body{margin:0; padding:0;}
+  img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+  table, td{border-collapse:collapse !important; mso-table-lspace:0pt; mso-table-rspace:0pt;}
+  #background-table{height:100% !important; margin:0; padding:0; width:100% !important;}
+  #template-container{width:600px;}
+
+  /*--------------------------------------------------------- Layout */
   /*
   @tab Page
   @section background color
   @tip Set the background color for your email.
   @theme page
   */
-    body,.background-table{
-      /*@editable*/background-color:#24275D;
-      /*@editable*/font-family: 'Open Sans', sans-serif;
-    }
-    #template-container{
-      padding: 25px;
-      margin-top: 25px;
-      max-width: 600px;
-    }
+  body,.background-table {
+    /*@editable*/background-color:#24275D;
+    /*@editable*/font-family: 'Open Sans', sans-serif;
+  }  
+  #template-container {
+    margin-top: 25px;      
+  }
+
+  /*--------------------------------------------------------- Headings */
   /*
   @tab Page
   @section main heading 
   @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
   @theme heading1
   */
-    h1,
-    .h1 {
-      /*@editable*/color:#24275D;
-      display:block;
-      /*@editable*/font-size:34px;
-      /*@editable*/font-weight:bold;
-      line-height:100%;
-      margin-bottom:10px;
-      /*@editable*/text-align:center;
-    }
+  h1,
+  .h1 {
+    /*@editable*/color:#24275D;
+    display:block;
+    /*@editable*/font-size:34px;
+    /*@editable*/font-weight:bold;
+    line-height:100%;
+    margin-bottom:10px;
+    /*@editable*/text-align:center;
+  }
   /*
   @tab Page
   @section other headings
   @tip Set the styling for all other headings in your emails.
   @theme heading2
   */
-    h2,
-    .h2,
-    h3, 
-    .h3, 
-    h4, 
-    .h4 {
-      /*@editable*/color:#24275D;
-      display:block;
-      /*@editable*/font-size:30px;
-      /*@editable*/font-weight:bold;
-      line-height:100%;
-      margin-bottom:10px;
-      /*@editable*/text-align:left;
-    }
-  
+  h2,
+  .h2,
+  h3, 
+  .h3, 
+  h4, 
+  .h4 {
+    /*@editable*/color:#24275D;
+    display:block;
+    /*@editable*/font-size:30px;
+    /*@editable*/font-weight:bold;
+    line-height:100%;
+    margin-bottom:10px;
+    /*@editable*/text-align:left;
+  }
 
+  /*--------------------------------------------------------- Header */
   /*
   @tab Header
   @section header text
   @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
   */
-    .preheader-content {
-      /*@editable*/color:#24275D;
-      /*@editable*/font-size:28px;
-      font-weight: 800;
-      line-height:40px;
-      text-align:left;
-    }
-    .header-content{
-      line-height:100%;
-      padding:25px 0;
-      text-align:center;
-      vertical-align:middle;
-    }
-    #header-image{
-      height:auto;
-      max-width:600px !important;
-    }
+  .header-text {
+    text-align:left;
+    /*@editable*/color:#24275D;
+    /*@editable*/font-size:28px;
+    font-weight: 800;
+    line-height:40px;      
+  }
+  .header-content {
+    line-height:100%;
+    text-align:center;
+    vertical-align:middle;
+    padding:45px;
+  }
+  .header-img {
+    padding:0 25px;
+  }
+  .header-img img {
+    width: 100%;      
+  }
+
+  /*--------------------------------------------------------- Body Content */
   /*
   @tab Body
   @section body style
   @tip Set the background color for your email's body area.
   */
-    #template-container,.body-content{
-      /*@editable*/background-color:#fecf9c;
-    }
+  #template-container,.body-content {
+    /*@editable*/background-color:#fecf9c;
+  }
   /*
   @tab Body
   @section body text
   @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
   @theme main
   */
-    .body-content div{
-      /*@editable*/color:#24275D;
-			font-size: 19px;
-			line-height: 1.6;
-      /*@editable*/text-align:left;
-    }
+  .body-content div {
+    /*@editable*/color:#24275D;
+		font-size: 19px;
+		line-height: 1.6;
+    /*@editable*/text-align:left;
+  }
   /*
   @tab Body
   @section body link
   @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
   */
-    .body-content div a:link,.body-content div a:visited {
-      /*@editable*/color:#24275D;
-      text-decoration: none;
-      font-weight: 600;
+  .body-content div a:link,
+  .body-content div a:visited {
+    /*@editable*/color:#24275D;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid;
+  }
+  .body-content img {
+    display:inline;
+    margin-bottom:10px;
+  }
+  #template-footer {
+    max-width: 600px;
+  }
 
-      border-bottom: 2px solid;
-    }
-    .body-content img{
-      display:inline;
-      margin-bottom:10px;
-    }
-
-    #template-footer{
-     max-width: 600px;
-    }
+  /*--------------------------------------------------------- Footer */
   /*
   @tab Footer
   @section footer text
   @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
   @theme footer
   */
-    .footer-content div{
-      /*@editable*/color:#FFFFFF;
-      font-size:12px;
-      line-height:125%;
-      text-align:left;
-    }
+  .footer-content div{
+    /*@editable*/color:#FFFFFF;
+    font-size:12px;
+    line-height:125%;
+    text-align:left;
+  }
   /*
   @tab Footer
   @section footer link
   @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
   */
-    .footer-content div a:link,.footer-content div a:visited{
-      /*@editable*/color:#FFFFFF;
-      font-weight:normal;
-      /*@editable*/text-decoration:underline;
-    }
-    .footer-content img{
-      display:inline;
-    }
+  .footer-content div a:link,.footer-content div a:visited{
+    /*@editable*/color:#FFFFFF;
+    font-weight:normal;
+    /*@editable*/text-decoration:underline;
+  }
+  .footer-content img{
+    display:inline;
+  }
+  #social{ }
 
-    #social{
-    }
+  #social div{
+    text-align:center;
+  }
+  #utility{ }
+  #utility div{
+    text-align:center;
+  }
+  #monkey-rewards img{
+    max-width:160px;
+  }
 
-    #social div{
-      text-align:center;
-    }
+  /*--------------------------------------------------------- Mobile */
+  @media only screen and (max-width: 480px){
 
-    #utility{
-
+    #template-container {
+      width: 100% !important;
+      max-width: 600px !important;
     }
-
-    #utility div{
-      text-align:center;
+    .header-content {
+      padding: 25px;
     }
-    #monkey-rewards img{
-      max-width:160px;
+    .header-text {
+      font-size:18px !important;    
     }
+  } 
+                                                                                                                                                                                                
 	</style>
 	</head>
 	<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
@@ -207,7 +207,7 @@
 	      <tr>
 	        <td align="center" valign="top">
 	              
-	          <table border="0" cellpadding="0" cellspacing="0" width="100%" id="template-container">
+	          <table border="0" cellpadding="0" cellspacing="0" width="600px" id="template-container">
 	            <tr>
 	              <td align="center" valign="top">               
 
@@ -216,17 +216,17 @@
 	                  <tr>
 	                    <td class="header-content">
 
-	                    	<span class="preheader-content" mc:edit="std_preheader_content">
+	                    	<span class="header-text" mc:edit="std_preheader_content">
 	                        Use one or two sentences in this area to offer a teaser of your email's content. Text here will show in a preview area in some email clients.
 	                      </span>
 
 	                    </td>
 	                  </tr>
 	                  <tr>
-	                    <td class="header-content">
+	                    <td class="header-img">
 	                    
 	                      <!-- // Begin Module: Standard Header Image \\ -->
-	                      <img src="http://placehold.it/600x400" style="max-width:600px; width:100%; " id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
+	                      <img src="http://placehold.it/600x400" style="max-width:550px;" id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
 	                      <!-- // End Module: Standard Header Image \\ -->
 	                    
 	                    </td>
@@ -240,12 +240,12 @@
 	              <td align="center" valign="top">
 	                  
 	                <!-- // Begin Template Body \\ -->
-	                <table border="0" cellpadding="10" cellspacing="0" width="100%" id="template-body">
+	                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="template-body">
 	                  <tr>
 	                    <td valign="top" class="body-content">
 	        
 	                      <!-- // Begin Module: Standard Content \\ -->
-	                      <table border="0" cellpadding="10" cellspacing="0" width="100%">
+	                      <table border="0" cellpadding="25" cellspacing="0" width="100%">
 	                        <tr>
 	                          <td valign="top">
 	                              <div mc:edit="std_content00">
@@ -311,13 +311,13 @@
                         </div>
                         <br />
                       </td>
-                      <td valign="top" width="170" id="monkey-rewards">
+                      <!--<td valign="top" width="170" id="monkey-rewards">
                         <br />
                         <div mc:edit="monkeyrewards">
                             *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
                         </div>
                         <br />
-                      </td>
+                      </td>-->
                     </tr>
                     <tr>
                       <td colspan="2" valign="middle" id="utility">

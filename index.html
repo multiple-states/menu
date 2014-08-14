@@ -63,6 +63,7 @@
   .body-content div {
     font-size: 16px;
     line-height: 1.6;
+    padding-bottom: 25px;
   }
   .body-content img {
     display: inline;
@@ -162,23 +163,14 @@
   .footer-content div a:link,
   .footer-content div a:visited {
     /*@editable*/color: #FFFFFF;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 2px solid;
   }
-  .footer-content img {
-    display: inline;
+  .monkey-rewards, 
+  .monkey-rewards a {
+    border-bottom: none !important;
   }
-  #social { }
-  #social div {
-    text-align: center;
-  }
-  #utility { }
-  #utility div {
-    text-align: center;
-  }
-  #monkey-rewards img {
+  .monkey-rewards img {
     max-width: 160px;
+    display: inline;
   }
 
   /*--------------------------------------------------------- Mobile */
@@ -215,22 +207,17 @@
 	                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="template-header">
 	                  <tr>
 	                    <td class="header-content">
-
 	                    	<h1 class="header-text" mc:edit="std_preheader_content">
 	                        Use one or two sentences in this area to offer a teaser of your email's content. Text here will show in a preview area in some email clients.
 	                      </h1>
-
                         <p class="header-date">*|DATE:|*</p>
-
 	                    </td>
 	                  </tr>
 	                  <tr>
-	                    <td class="header-img">
-	                    
+	                    <td class="header-img">	                    
 	                      <!-- // Begin Module: Standard Header Image \\ -->
-	                      <img src="http://placehold.it/550x400" style="max-width:550px;" id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
-	                      <!-- // End Module: Standard Header Image \\ -->
-	                    
+	                      <img src="http://placehold.it/550x400" style="max-width:550px;" id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner />
+	                      <!-- // End Module: Standard Header Image \\ -->	                    
 	                    </td>
 	                  </tr>
 	                </table>
@@ -249,13 +236,11 @@
 	                      <!-- // Begin Module: Standard Content \\ -->
 	                      <table border="0" cellpadding="25" cellspacing="0" width="100%">
 	                        <tr>
-	                          <td valign="top">
-                                *|IF:FNAME|*
-                                Hi *|FNAME|*
-                                *|END:IF|*
-                                <br />
-                                <br />
+	                          <td valign="top">                                
 	                              <div mc:edit="std_content00">
+                                    Hi *|FNAME|*
+                                    <br />
+                                    <br />
 	                                  Getting started: Customize your template by clicking on the style editor tabs up above. Set your fonts, colors, and styles. After setting your styling is all done you can click here in this area, delete the text, and start adding your own awesome content!
 	                                  <br />
 	                                  <br />
@@ -290,14 +275,17 @@
                   <!-- // Begin Module: Standard Footer \\ -->
                   <table border="0" cellpadding="10" cellspacing="0" width="100%">
                     <tr>
-                      <td valign="top" width="370">
-                        <br />
+                      <td valign="top">
                         <div mc:edit="std_footer">
+                            <h2 class="logo-text">Multiple States</h2>
+                            <br />
                             *|IF:LIST|*
                             <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
                             <br />
-                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                            *|LIST:DESCRIPTION|*
+                            <br />
+                            Registered in England and Wales Company No. 9102184.
+                            <br />
+                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->                            
                             <br />
                             <strong>Our mailing address is:</strong>
                             <br>
@@ -313,22 +301,24 @@
                             *|USER:ADDRESS_HTML|*
                             <!-- *|END:IF|* -->
                             *|END:IF|*
+                            <br />
+                            <br />
+                            Sent using:
+                            <br />
+                            <br />
+                            <div class="monkey-rewards" mc:edit="monkeyrewards">
+                                *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div mc:edit="std_utility">
+                              &nbsp;<a href="*|UNSUB|*">unsubscribe from our newsletter</a>&nbsp;
+                            </div>
                         </div>
                         <br />                        
                       </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" valign="middle" id="utility">
-                        <div mc:edit="std_utility">
-                          &nbsp;<a href="*|UNSUB|*">unsubscribe from our newsletter</a>&nbsp;
-                        </div>
-                        <br />
-                        <div mc:edit="monkeyrewards">
-                            *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
-                        </div>
-                        <br />
-                      </td>
-                    </tr>
+                    </tr>                    
                   </table>
                   <!-- // End Module: Standard Footer \\ -->
                   

@@ -126,10 +126,20 @@
 
   /*--------------------------------------------------------- Header */
   .header-text {
+    margin: 0;
+    padding: 0;
+
+    line-height: 140px;      
+
+    font-size: 104px;
+  }
+  .header-subtext {
     line-height: 65px;   
     padding: 15px 45px 45px 45px;   
 
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
   }
   .header-content {
     line-height: 100%;
@@ -150,6 +160,10 @@
   @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
   @theme footer
   */
+  .footer-content {
+    border-top: 4px solid #000;
+  }
+
   .footer-content div {
     /*@editable*/color: #1a1a1a;
     font-size: 14px;
@@ -185,6 +199,13 @@
     .header-text {
       padding: 25px !important; 
 
+      font-size: 32px !important;
+      line-height: 30px !important;
+    }
+    .header-subtext {
+      padding: 25px !important;
+      margin: 0; 
+
       font-size: 18px !important;
       line-height: 30px !important;         
     }
@@ -206,9 +227,8 @@
 	                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="template-header">
 	                  <tr>
 	                    <td class="header-content">
-	                    	<h1 class="header-text" mc:edit="std_preheader_content">
-	                        Multiple States<br /> now manages your website
-	                      </h1>
+	                    	<h1 class="header-text" mc:edit="std_preheader_content">Multiple States</h1>
+                        <h2 class="header-subtext">Now manages your website</h2>
 	                    </td>
 	                  </tr>
 	                  <tr>

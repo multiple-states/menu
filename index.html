@@ -42,10 +42,13 @@
   @theme page
   */
   body,.background-table {
-    /*@editable*/color: #24275D;
-    /*@editable*/background-color: #24275D;
+    /*@editable*/color: #1a1a1a;
+    /*@editable*/background-color: #fff;
     /*@editable*/font-family: 'Open Sans', Verdana, Helvetica, Arial;
+    border: 15px solid #1a1a1a;
+
   }  
+
   #template-container {
     margin-top: 25px;      
   }
@@ -58,7 +61,7 @@
   @theme page
   */
   #template-container,.body-content {
-    /*@editable*/background-color: #fecf9c;
+    /*@editable*/background-color: #fff;
   }
   .body-content div {
     font-size: 16px;
@@ -115,7 +118,7 @@
   */
   a:link,
   a:visited {
-    /*@editable*/color: #24275D;
+    /*@editable*/color: #ff1520;
     text-decoration: none;
     font-weight: 600;
     border-bottom: 2px solid;
@@ -123,12 +126,10 @@
 
   /*--------------------------------------------------------- Header */
   .header-text {
-    line-height: 50px;   
-    padding: 45px 45px 25px 45px;   
-  }
-  .header-date {
-    padding-bottom: 25px;
-    font-size: 12px; 
+    line-height: 65px;   
+    padding: 15px 45px 45px 45px;   
+
+    font-size: 40px;
   }
   .header-content {
     line-height: 100%;
@@ -150,8 +151,8 @@
   @theme footer
   */
   .footer-content div {
-    /*@editable*/color: #FFFFFF;
-    font-size: 12px;
+    /*@editable*/color: #1a1a1a;
+    font-size: 14px;
     line-height: 125%;
     text-align: left;
   }
@@ -162,7 +163,7 @@
   */
   .footer-content div a:link,
   .footer-content div a:visited {
-    /*@editable*/color: #FFFFFF;
+    /*@editable*/color: #1a1a1a;
   }
   .monkey-rewards, 
   .monkey-rewards a {
@@ -175,9 +176,7 @@
 
   /*--------------------------------------------------------- Mobile */
   @media only screen and (max-width: 480px) {
-    body {
-      border: 10px solid;
-    }
+    
     #template-container {
       width: 100% !important;
       max-width: 600px !important;
@@ -208,15 +207,14 @@
 	                  <tr>
 	                    <td class="header-content">
 	                    	<h1 class="header-text" mc:edit="std_preheader_content">
-	                        Use one or two sentences in this area to offer a teaser of your email's content. Text here will show in a preview area in some email clients.
+	                        Multiple States<br /> now manages your website
 	                      </h1>
-                        <p class="header-date">*|DATE:|*</p>
 	                    </td>
 	                  </tr>
 	                  <tr>
 	                    <td class="header-img">	                    
 	                      <!-- // Begin Module: Standard Header Image \\ -->
-	                      <img src="http://placehold.it/550x400" style="max-width:550px;" id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner />
+	                      <img src="preview.jpg" style="max-width:550px;" id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner />
 	                      <!-- // End Module: Standard Header Image \\ -->	                    
 	                    </td>
 	                  </tr>
@@ -241,10 +239,13 @@
                                     Hi *|FNAME|*
                                     <br />
                                     <br />
-	                                  Getting started: Customize your template by clicking on the style editor tabs up above. Set your fonts, colors, and styles. After setting your styling is all done you can click here in this area, delete the text, and start adding your own awesome content!
-	                                  <br />
-	                                  <br />
-	                                  After you enter your content, highlight the text you want to style and select the options you set in the style editor in the "styles" drop down box. Want to <a href="http://www.mailchimp.com/kb/article/im-using-the-style-designer-and-i-cant-get-my-formatting-to-change" target="_blank">get rid of styling on a bit of text</a> but having trouble doing it? Just use the "clear styles" button to strip the text of any formatting and reset your style.
+	                                  As we have previously worked together I am sending you this email to let you know of a few changes that relate to your website and its ongoing maintenance. 
+                                    <br />
+                                    <br />
+                                    I recently joined forces with Will Mclean and founded a design and development studio called <a href="#">Multiple States</a>. This means you now have the support and expertise of the entire studio. It also means the backups and / or updates of your sites are now managed by Multiple States rather than by me personally. 
+                                    <br />
+                                    <br />
+                                    If there is anything in this email you are unclear about please get in touch with me at <a href="#">kevin@multiplestates.co.uk</a>
                                     <br />
                                     <br />
                                     Kevin & Will

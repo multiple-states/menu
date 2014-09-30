@@ -42,10 +42,10 @@
   @theme page
   */
   body,.background-table {
-    /*@editable*/color: #1a1a1a;
+    /*@editable*/color: #231f20;
     /*@editable*/background-color: #fff;
     /*@editable*/font-family: 'Open Sans', Verdana, Helvetica, Arial;
-    border: 15px solid #1a1a1a;
+    border: 15px solid #231f20;
 
   }  
 
@@ -60,9 +60,6 @@
   @tip Set the background color for your email's body area.
   @theme page
   */
-  #template-container,.body-content {
-    /*@editable*/background-color: #fff;
-  }
   .body-content div {
     font-size: 16px;
     line-height: 1.6;
@@ -118,7 +115,7 @@
   */
   a:link,
   a:visited {
-    /*@editable*/color: #ff1520;
+    /*@editable*/color: #231f20;
     text-decoration: none;
     font-weight: 600;
     border-bottom: 2px solid;
@@ -161,14 +158,19 @@
   @theme footer
   */
   .footer-content {
-    border-top: 4px solid #000;
+    text-align: center;
+    border-top: 4px solid #231f20;
   }
 
   .footer-content div {
-    /*@editable*/color: #1a1a1a;
+    /*@editable*/color: #231f20;
     font-size: 14px;
     line-height: 125%;
-    text-align: left;
+    text-align: center;
+  }
+
+  .footer-content .logo-text {
+    text-align: center;
   }
   /*
   @tab Footer
@@ -177,7 +179,7 @@
   */
   .footer-content div a:link,
   .footer-content div a:visited {
-    /*@editable*/color: #1a1a1a;
+    /*@editable*/color: #231f20;
   }
   .monkey-rewards, 
   .monkey-rewards a {
@@ -227,14 +229,14 @@
 	                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="template-header">
 	                  <tr>
 	                    <td class="header-content">
-	                    	<h1 class="header-text" mc:edit="std_preheader_content">Multiple States</h1>
-                        <h2 class="header-subtext">Now manages your website</h2>
+	                    	<h1 class="header-text" mc:edit="std_preheader_content">Heading</h1>
+                        <h2 class="header-subtext" mc:edit="std_subheader_content">Sub heading</h2>
 	                    </td>
 	                  </tr>
 	                  <tr>
 	                    <td class="header-img">	                    
 	                      <!-- // Begin Module: Standard Header Image \\ -->
-	                      <img src="preview.jpg" style="max-width:550px;" id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner />
+	                      <img src="http://placehold.it/800x600" style="max-width:600px;" id="header-image campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner />
 	                      <!-- // End Module: Standard Header Image \\ -->	                    
 	                    </td>
 	                  </tr>
@@ -259,18 +261,7 @@
                                     Hi *|FNAME|*
                                     <br />
                                     <br />
-	                                  As we have previously worked together I am sending you this email to let you know of a few changes that relate to your website and its ongoing maintenance. 
-                                    <br />
-                                    <br />
-                                    I recently joined forces with Will Mclean and founded a design and development studio called <a href="#">Multiple States</a>. This means you now have the support and expertise of the entire studio. It also means the backups and / or updates of your sites are now managed by Multiple States rather than by me personally. 
-                                    <br />
-                                    <br />
-                                    If there is anything in this email you are unclear about please get in touch with me at <a href="#">kevin@multiplestates.co.uk</a>
-                                    <br />
-                                    <br />
-                                    Kevin & Will
-                                    <br />
-                                    <strong>Multiple States</strong>
+                                    Your copy goes here
 	                              </div>
 	                          </td>
 	                        </tr>

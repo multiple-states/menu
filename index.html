@@ -11,6 +11,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- Facebook sharing information tags -->
   <meta property="og:title" content="*|MC:SUBJECT|*">
@@ -21,6 +22,9 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700' rel='stylesheet' type='text/css'>
     
   <style type="text/css">
+
+  /* for gmail to show google fonts */
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700);
 
   /*--------------------------------------------------------- Client-specific Styles */
   #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
@@ -50,7 +54,7 @@
   }  
 
   #template-container {
-    margin-top: 25px;      
+    padding-top: 25px;      
   }
 
   /*--------------------------------------------------------- Body Content */
@@ -67,7 +71,7 @@
   }
   .body-content img {
     display: inline;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
   #template-footer {
     max-width: 600px;
@@ -83,7 +87,7 @@
   h1,
   .h1 {
     display: block;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     /*@editable*/text-align: center;
     /*@editable*/font-size: 34px;
     font-weight: 800;
@@ -105,7 +109,7 @@
     /*@editable*/font-size: 30px;
     /*@editable*/font-weight: 700;
     line-height: 100%;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     /*@editable*/text-align: left;
   }
   /*
@@ -125,23 +129,33 @@
   .header-text {
     margin: 0;
     padding-top: 25px;
+  }
+  .header-subtext {    
+    padding: 15px 45px 45px 45px;
+  }
+  .header-text h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 120px; 
 
-    line-height: 120px;      
-
+    font-weight: 800;
     font-size: 95px;
   }
-  .header-subtext {
-    line-height: 65px;   
-    padding: 15px 45px 45px 45px;   
+  .header-subtext h2 {
+    margin: 0;
+    padding: 0;    
+    line-height: 65px; 
 
     font-size: 30px;
     font-weight: 800;
     text-align: center;
   }
-  .header-subtext a {
+  .header-subtext h2 a {
     font-weight: 800;
   }
   .header-content {
+    padding: 25px 0;
+
     line-height: 100%;
     text-align: center;
     vertical-align: middle;    
@@ -152,6 +166,11 @@
   .header-img img {
     width: 100%;      
   }  
+
+  /*--------------------------------------------------------- Main */
+  .copy {
+    text-align: left;
+  }
 
   /*--------------------------------------------------------- Footer */
   /*
@@ -203,14 +222,16 @@
     }
     .header-text {
       padding: 25px 25px 0 25px !important; 
-
-      font-size: 32px !important;
-      line-height: 50px !important;
     }
     .header-subtext {
       padding: 25px !important;
-      margin: 0 !important;
-
+      margin: 0 !important;         
+    }
+    .header-text h1 {
+      font-size: 32px !important;
+      line-height: 50px !important;
+    }
+    .header-subtext h2 {
       font-size: 18px !important;
       line-height: 30px !important;         
     }
@@ -225,6 +246,12 @@
   .background-table {    
     font-family: Arial !important; 
   } 
+  header-text h1 {
+    font-family: "Arial Black", Gadget, sans-serif !important;
+  }
+  .header-subtext h2 {
+    font-family: "Arial Black", Gadget, sans-serif !important;        
+  }
   </style>
   <![endif]-->
 	</head>
@@ -242,8 +269,8 @@
 	                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="template-header">
 	                  <tr>
 	                    <td class="header-content">
-	                    	<h1 class="header-text" mc:edit="std_preheader_content">Heading</h1>
-                        <h2 class="header-subtext" mc:edit="std_subheader_content">Sub heading <a href="#">test link</a></h2>
+	                    	<div class="header-text"><h1 mc:edit="std_preheader_content">Heading</h1></div>
+                        <div class="header-subtext"><h2 mc:edit="std_subheader_content">Sub heading <a href="#">with a link</a></h2></div>
 	                    </td>
 	                  </tr>
 	                  <tr>
@@ -254,7 +281,7 @@
 	                    </td>
 	                  </tr>
 	                </table>
-	                <!-- // End Template Header \\ --> 
+	                <!-- // End Template Header \\ -->
 
 	              </td>
 	            </tr>
@@ -270,7 +297,7 @@
 	                      <table border="0" cellpadding="25" cellspacing="0" width="100%">
 	                        <tr>
 	                          <td valign="top">                                
-	                              <div mc:edit="std_content00">
+	                              <div mc:edit="std_content00" class="copy">
                                     Hi *|FNAME|*
                                     <br />
                                     <br />

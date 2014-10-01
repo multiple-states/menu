@@ -138,6 +138,9 @@
     font-weight: 800;
     text-align: center;
   }
+  .header-subtext a {
+    font-weight: 800;
+  }
   .header-content {
     line-height: 100%;
     text-align: center;
@@ -230,7 +233,7 @@
 	                  <tr>
 	                    <td class="header-content">
 	                    	<h1 class="header-text" mc:edit="std_preheader_content">Heading</h1>
-                        <h2 class="header-subtext" mc:edit="std_subheader_content">Sub heading</h2>
+                        <h2 class="header-subtext" mc:edit="std_subheader_content">Sub heading <a href="#">test link</a></h2>
 	                    </td>
 	                  </tr>
 	                  <tr>
@@ -288,7 +291,7 @@
                     <tr>
                       <td valign="top">
                         <div mc:edit="std_footer">
-                            <h2 class="logo-text">Multiple States</h2>
+                            <h2 class="logo-text">Company Name</h2>
                             <br />
                             *|IF:LIST|*
                             <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>

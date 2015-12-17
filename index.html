@@ -17,14 +17,8 @@
   <meta property="og:title" content="*|MC:SUBJECT|*">
   
   <title>*|MC:SUBJECT|*</title>
-
-  <!-- Google Font -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700' rel='stylesheet' type='text/css'>
     
   <style type="text/css">
-
-  /* for gmail to show google fonts */
-  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700);
 
   /*--------------------------------------------------------- Client-specific Styles */
   #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
@@ -48,9 +42,7 @@
   body,.background-table {
     /*@editable*/color: #231f20;
     /*@editable*/background-color: #fff;
-    /*@editable*/font-family: 'Open Sans', Helvetica, Arial !important; 
-    border: 15px solid #231f20;
-
+    /*@editable*/font-family: Arial !important; 
   }  
 
   #template-container {
@@ -122,16 +114,12 @@
     /*@editable*/color: #231f20;
     text-decoration: none;
     font-weight: 600;
-    border-bottom: 2px solid;
   }
 
   /*--------------------------------------------------------- Header */
   .header-text {
     margin: 0;
     padding-top: 25px;
-  }
-  .header-subtext {    
-    padding: 15px 45px 45px 45px;
   }
   .header-text h1 {
     margin: 0;
@@ -140,18 +128,6 @@
 
     font-weight: 800;
     font-size: 95px;
-  }
-  .header-subtext h2 {
-    margin: 0;
-    padding: 0;    
-    line-height: 65px; 
-
-    font-size: 30px;
-    font-weight: 800;
-    text-align: center;
-  }
-  .header-subtext h2 a {
-    font-weight: 800;
   }
   .header-content {
     padding: 25px 0;
@@ -181,12 +157,11 @@
   */
   .footer-content {
     text-align: center;
-    border-top: 4px solid #231f20;
   }
 
   .footer-content div {
     /*@editable*/color: #231f20;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 125%;
     text-align: center;
   }
@@ -231,10 +206,6 @@
       font-size: 32px !important;
       line-height: 50px !important;
     }
-    .header-subtext h2 {
-      font-size: 18px !important;
-      line-height: 30px !important;         
-    }
   } 
 
 	</style>
@@ -269,8 +240,9 @@
 	                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="template-header">
 	                  <tr>
 	                    <td class="header-content">
-	                    	<div class="header-text"><h1 mc:edit="std_preheader_content">Heading</h1></div>
-                        <div class="header-subtext"><h2 mc:edit="std_subheader_content">Sub heading <a href="#">with a link</a></h2></div>
+	                    	<!-- // Begin Module: Standard Header Image \\ -->
+                        <img src="http://placehold.it/300x200" style="max-width:300px;" mc:label="header_logo" mc:edit="header_logo" mc:allowdesigner />
+                        <!-- // End Module: Standard Header Image \\ -->   
 	                    </td>
 	                  </tr>
 	                  <tr>
@@ -328,30 +300,9 @@
                     <tr>
                       <td valign="top">
                         <div mc:edit="std_footer">
-                            <h2 class="logo-text">Company Name</h2>
                             <br />
-                            *|IF:LIST|*
-                            <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+                            <a href="multiplestats.co.uk" target="_blank" title="Multiple States">multiplestats.co.uk</a>                   
                             <br />
-                            <br />
-                            Registered in England and Wales Company No. 9102184.
-                            <br />
-                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->                            
-                            <br />
-                            <strong>Our mailing address is:</strong>
-                            <br>
-                            *|HTML:LIST_ADDRESS_HTML|*
-                            <br>
-                            <!-- *|END:IF|* -->
-                            *|ELSE:|*
-                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                            <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, All rights reserved.</em>
-                            <br />
-                            <strong>Our mailing address is:</strong>
-                            <br />
-                            *|USER:ADDRESS_HTML|*
-                            <!-- *|END:IF|* -->
-                            *|END:IF|*
                             <br />
                             Sent using:
                             <br />
